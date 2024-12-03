@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "47aaefee-b435-47d7-aa30-a026e771b0f2",
+		"name": "Blog-Intuji",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34111336"
+	},
+	"item": [
+		{
+			"name": "Get All Blogs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/apis/get_all_blogs.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"apis",
+						"get_all_blogs.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Blog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Key",
+						"value": "Content-Type"
+					},
+					{
+						"key": "Value",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Test Blog To Update\",\r\n    \"description\": \"This is test for update.\",\r\n    \"category\": \"Test\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/apis/post_blog.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"apis",
+						"post_blog.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a Blog by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Key",
+						"value": "Content-Type"
+					},
+					{
+						"key": "Value",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/apis/get_blog_by_id.php?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"apis",
+						"get_blog_by_id.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Blog",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Key",
+						"value": "Content-Type",
+						"type": "text"
+					},
+					{
+						"key": "Value",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 4,\r\n  \"title\": \"How to Get Started in Backend Development\",\r\n  \"description\": \"This is a blog that describes how you can get started in Backend Development as a beginner.\",\r\n  \"category\": \"Backend Development\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/apis/update_blog.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"apis",
+						"update_blog.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
